@@ -92,18 +92,18 @@
 
 .container2 .row{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     height: 100%;
     justify-content: space-between;
     width: 100%;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .container2 .row .aboutimage{
     flex-basis: 60%;
     height: 100%;
-    background-image: url(images/mobile/image-interactive.jpg);
+    background-image: url(images/desktop/image-interactive.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -111,17 +111,17 @@
 .container2 .row .aboutcontent{
     flex-basis: 60%;
     background: #fff;
-    padding: 5% 10%;
+    padding: 6% 8%;
+    height: 100%;
     position: absolute;
     top: 40%;
     right: 0;
-    margin: auto;
-    height: 100%;
+    z-index: 2;
 }
 
-.container2 .row .aboutcontent h1{
+.container2 .row .aboutcontent h2{
     font-size: 40px;
-    font-weight: 300;
+    font-weight: 100;
     color: #111;
     margin-bottom: 15px;
     text-transform: uppercase;
@@ -158,9 +158,9 @@
     display: none;
 }
 
-.container3 .products .content h1{
+.container3 .products .content h3{
     font-size: 35px;
-    font-weight: 300;
+    font-weight: 100;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-family: 'Josefin Sans', sans-serif;
@@ -292,7 +292,7 @@
     left: 50%;
     border-radius: 50%;
     transform: translate(-200%, -50%);
-    background: hsla(0, 0%, 100%, 0.822);
+    background: hsla(0, 0%, 100%, 0.89);
     width: 600px;
     height: 600px;
     transition: .7s;
@@ -448,11 +448,12 @@
 #mobile-menu{
     display: none;
 }
+    
 
 @media only screen and (max-width: 768px){
     .container1{
         background-image: url(images/mobile/image-hero.jpg);
-        padding: 0 5%;
+        padding: 5%;
     }
 
     .container1 header #mobilenav{
@@ -462,25 +463,29 @@
         right: 5%;
         top: 5%;
         cursor: pointer;
+        width: 50px;
     }
 
     .container1 header nav{
         display: none;
     }
 
+    .container1 header .logo{
+        width: 250px;
+    } 
+
     .container1 header{
         padding: 30px 0 0 0;
     }
 
     .container1 h1{
-        margin-top: 30%;
+        margin-top: 35%;
         width: 100%;
-        font-size: 40px;
-        line-height: 45px;
+        font-size: 80px;
+        line-height: 80px;
         letter-spacing: 2px;
-        font-weight: 200;
-        padding: 25px;
-        height: 35vh;
+        font-weight: 100;
+        padding: 5%;
     }
 
     .container1 h1 .break{
@@ -504,38 +509,36 @@
     .container2 .row .aboutimage{
         flex-basis: 100%;
         height: 60%;
-        background-image: url(images/mobile/image-interactive.jpg);
-        background-position: center;
-        background-size: cover;
+        background-image: url(images/desktop/image-interactive.jpg);
     }
     
     .container2 .row .aboutcontent{
-        flex-basis: 100%;
+        flex-basis: 60%;
         background: #fff;
-        padding: 10% 5%;
+        padding: 7% 5%;
         position: relative;
         top: 0;
         left: 0;
         margin: auto;
-        height: 60%;
+        height: 70%;
         text-align: center;
     }
     
-    .container2 .aboutcontent h1{
-        font-size: 30px;
-        font-weight: 300;
+    .container2 .row .aboutcontent h2{
+        font-size: 40px;
+        font-weight: 100;
         color: #111;
         margin-bottom: 15px;
         text-transform: uppercase;
     }
     
-    .container2 .aboutcontent p{
-        font-size: 14px;
+    .container2 .row .aboutcontent p{
+        font-size: 22px;
         font-weight: 300;
         color: hsl(0, 0%, 55%);
     }
 
-    .container2 .aboutcontent p .break1{
+    .container2 .row .aboutcontent p .break1{
       display: none;
     }
 
@@ -544,15 +547,14 @@
         margin-bottom: 30px;
     }   
 
-    .container3 .products .content h1{
-        font-size: 40px;
-        font-weight: 300;
+    .container3 .products .content h3{
+        font-size: 35px;
+        font-weight: 100;
         letter-spacing: 1.5px;
         text-transform: uppercase;
-        text-align: center;
-        margin-left: 15px;
-        margin-bottom: 15px;
-        width: 100%;  
+        margin-left: 150px;
+        margin-bottom: 20px;
+        margin-top: 90px;  
     }
 
     .container3 .products .link{
@@ -814,3 +816,261 @@
         font-family: 'Josefin Sans', sans-serif;
     }    
 }
+
+@media only screen and (max-width: 414px){
+    .container1 h1{
+        font-size: 40px;
+        line-height: 40px;
+        padding: 5%;
+        margin-top: 50%;
+    }
+
+    .container1 header .logo{
+        width: 130px;
+    }
+
+    .container1 header #mobilenav{
+        display: block;
+        z-index: 40;
+        position: fixed;
+        right: 5%;
+        top: 7%;
+        cursor: pointer;
+        width: 30px;
+    }
+
+    .container2{
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+        padding: 15% 30px 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .container2 .row{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        min-height: 100vh;
+        justify-content: space-evenly;
+        width: 100%;
+        position: relative;
+    }
+    
+    .container2 .row .aboutimage{
+        flex-basis: 100%;
+        height: 40%;
+        background-image: url(images/mobile/image-interactive.jpg);
+        overflow: hidden;
+    }
+    
+    .container2 .row .aboutcontent{
+        flex-basis: 100%;
+        background: #fff;
+        padding: 5% 6%;
+        position: relative;
+        top: 0;
+        right: 0;
+        height: 50%;
+    }
+    
+    .container2 .row .aboutcontent h2{
+        font-size: 30px;
+    }
+    
+    .container2 .row .aboutcontent p{
+        font-size: 15px;
+    }
+
+    .container3 .products .content h3{
+        font-size: 25px;
+        font-weight: 300;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-left: 60px;
+        margin-bottom: 20px;
+        margin-top: 30px; 
+    }
+
+    #mobile-menu .logo{
+        width: 150px;
+        margin-top: 35px;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .container1 h1{
+        font-size: 40px;
+        line-height: 40px;
+        padding: 5%;
+    }
+
+    .container1 header .logo{
+        width: 150px;
+    }
+
+    .container1 header #mobilenav{
+        display: block;
+        z-index: 40;
+        position: fixed;
+        right: 5%;
+        top: 7%;
+        cursor: pointer;
+        width: 30px;
+    }
+
+    .container2{
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+        padding: 15% 30px 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .container2 .row{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        min-height: 100vh;
+        justify-content: space-evenly;
+        width: 100%;
+        position: relative;
+    }
+    
+    .container2 .row .aboutimage{
+        flex-basis: 100%;
+        height: 40%;
+        background-image: url(images/mobile/image-interactive.jpg);
+        overflow: hidden;
+    }
+    
+    .container2 .row .aboutcontent{
+        flex-basis: 100%;
+        background: #fff;
+        padding: 5% 6%;
+        position: relative;
+        top: 0;
+        right: 0;
+        height: 40%;
+    }
+    
+    .container2 .row .aboutcontent h2{
+        font-size: 30px;
+    }
+    
+    .container2 .row .aboutcontent p{
+        font-size: 16px;
+    }
+
+    .container3 .products .content h3{
+        font-size: 25px;
+        font-weight: 300;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-left: 60px;
+        margin-bottom: 40px;
+        margin-top: 80px;  
+    }
+
+    .container3{
+        padding: 10% 5%;
+        min-height: 100vh;
+    }
+
+    .container3 .products{
+        margin-bottom: 0;
+    }  
+
+    .footer .row .leftcol nav ul li a{
+        font-size: 10px;
+    }
+
+    .footer .row .rightcol{
+        flex-basis: 100%;
+    }    
+
+    #mobile-menu .logo{
+        width: 150px;
+        margin-top: 30px;
+    }
+
+    #mobile-menu nav{
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+    }
+
+    #mobile-menu nav ul li{
+        display: block;
+        margin-bottom: 25px;
+    }
+
+    #mobile-menu nav ul li a{
+        text-decoration: none;
+        color: hsl(0, 0%, 100%);
+        font-size: 25px;
+        font-weight: 100;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+}
+
+@media only screen and (max-width: 320px){
+    .container1 h1{
+        font-size: 30px;
+        line-height: 30px;
+        padding: 5%;
+    }
+
+    .container1 header #mobilenav{
+        display: block;
+        z-index: 40;
+        position: fixed;
+        right: 5%;
+        top: 8%;
+        cursor: pointer;
+        width: 25px;
+    }
+
+    .container2 .row .aboutcontent h2{
+        font-size: 25px;
+    }
+    
+    .container2 .row .aboutcontent p{
+        font-size: 14px;
+    }
+
+    .container3 .products .content h3{
+        font-size: 25px;
+        font-weight: 300;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-left: 30px;
+        margin-bottom: 40px;
+        margin-top: 80px;  
+    }
+
+    .container3 .productscontent .feature h2{
+        font-size: 25px;
+        font-weight: 100;
+        position: absolute;
+        bottom: 10%;
+        left: 6%;
+    }
+
+    .footer .attribution p{
+        font-size: 10px;
+    }
+
+}
+
+
